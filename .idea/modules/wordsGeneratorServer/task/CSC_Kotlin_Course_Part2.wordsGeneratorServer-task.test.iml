@@ -50,7 +50,9 @@
     <output-test url="file://$MODULE_DIR$/../../../../wordsGeneratorServer/task/out/test/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../wordsGeneratorServer/task/src/test" />
-    <content url="file://$MODULE_DIR$/../../../../wordsGeneratorServer/task/test" />
+    <content url="file://$MODULE_DIR$/../../../../wordsGeneratorServer/task/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../wordsGeneratorServer/task/test" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="CSC_Kotlin_Course_Part2.wordsGeneratorServer-task.main" />
