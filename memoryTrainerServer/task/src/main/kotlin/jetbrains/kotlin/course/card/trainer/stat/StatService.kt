@@ -1,10 +1,20 @@
 package jetbrains.kotlin.course.card.trainer.stat
 
+import jetbrains.kotlin.course.card.trainer.card.Back
 import org.springframework.stereotype.Service
 
 @Service
 class StatService {
-    fun getHistory(): MutableList<Stat> = TODO("Not implemented yet")
+    companion object {
+        val history: MutableList<Stat> = mutableListOf()
+    }
 
-    fun save(knownBacks: List<String>, unknownBacks: List<String>): Unit = TODO("Not implemented yet")
+    fun getHistory(): MutableList<Stat> = history.reversed().toMutableList()
+
+    fun save(knownBacks: List<String>, unknownBacks: List<String>): Unit {
+        val knownBacksBack = knownBacks.map { Back(it) }
+        val unknownBacksBack = unknownBacks.map { Back(it) }
+
+        history.add(Stat(knownBacksBack, unknownBacksBack))
+    }
 }
